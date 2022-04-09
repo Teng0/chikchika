@@ -41,8 +41,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
+    public function getAvatarAttribute(){
+        return "https://picsum.photos/40?u=".$this->email ;
+    }
     public function timeline(){
         return Chik::where('user_id',$this->id)->latest()->get();
     }
+
+    public function follows()
+    {
+//        return $this->
+//    }
 }

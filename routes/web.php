@@ -18,6 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::post('/chik',[ChikController::class,'store'])->name('chik');
 Route::get('/dashboard',[ChikController::class,"index"])->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';

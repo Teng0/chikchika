@@ -22,7 +22,7 @@ class ChikFactory extends Factory
     public function definition()
     {
         return [
-            "user_id"=>random_int(0,10),
+            "user_id"=>random_int(1,10),
             "body"=>$this->faker->sentence,
         ];
     }
